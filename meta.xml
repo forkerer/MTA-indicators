@@ -1,0 +1,23 @@
+<meta>
+	<info version="1.0.0" type="script" author="Quindo/Forkerer" />
+
+	<!-- FILES -->
+		<file src="files/indicatorIcon.png" cache="true" />
+
+	<!-- SCRIPTS -->
+		<!-- UTILITY -->
+		<script src="utility/Utility.lua" type="client" cache="false"/>
+		<script src="utility/IndicatorsRestrictions.lua" type="client" cache="false"/>
+
+		<!-- CLASSES -->
+		<script src="classes/IndicatorsManager.lua" type="client" cache="false"/>
+		<script src="classes/IndicatorsManagerSetters.lua" type="client" cache="false"/>
+		<script src="classes/IndicatorsManagerGetters.lua" type="client" cache="false"/>
+
+		<script src="classes/Indicator.lua" type="client" cache="false"/>
+		<script src="classes/IndicatorSetters.lua" type="client" cache="false"/>
+		<script src="classes/IndicatorGetters.lua" type="client" cache="false"/>
+
+		<!-- OTHER -->
+		<script src="random.lua" type="client" cache="false"/>
+</meta>
