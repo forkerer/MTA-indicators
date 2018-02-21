@@ -132,7 +132,7 @@ end
 -- INDICATOR IMAGE FUNCTIONS
 function Indicator:SetImage(image, sizeX, sizeY)
 	-- Chech if image is element
-	if not isElement(image) then
+	if not (isElement(image) and (getElementType(image) == "texture")) then
 		outputDebugString( "Tried to change indicator image, but it isn't an element", 2 )
 		return false
 	end
@@ -237,7 +237,9 @@ function Indicator:SetTextPlacement(placement)
 		return false
 	end
 
+	local lastPlacement = self.textPlacement
 	self.textPlacement = placement
+
 
 	-- Refresh text positions
 	if self.text and self.textVisible then
@@ -245,14 +247,14 @@ function Indicator:SetTextPlacement(placement)
 	end
 
 	-- Refresh distance placement if it's visible and it's placement is same as text one
-	if self.distVisible and self.distText and (self.textPlacement == self.distPlacement) then
+	if self.distVisible and self.distText and ((lastPlacement == self.distPlacement) or (self.textPlacement == self.distPlacement)) then
 		self:RefreshDistTextPosition()
 	end
 
 	return self
 end
 
-function Indicator:SetTextAlignementX(alignment)
+function Indicator:SetTextAlignmentX(alignment)
 	-- Check if alignment is allowed
 	if not AllowedAlignmentX[alignment] then
 		outputDebugString( "Tried to give indicator text unknown alignmentX: "..tostring(alignment), 2 )
@@ -267,7 +269,7 @@ function Indicator:SetTextAlignementX(alignment)
 	return self
 end
 
-function Indicator:SetTextAlignementY(alignment)
+function Indicator:SetTextAlignmentY(alignment)
 	-- Check if alignment is allowed
 	if not AllowedAlignmentY[alignment] then
 		outputDebugString( "Tried to give indicator text unknown alignmentY: "..tostring(alignment), 2 )

@@ -153,9 +153,9 @@ end
 
 function IndicatorsManager:GetDistanceUpdateCountLimit(updateType)
 	if updateType == "all" then
-		return self.distanceUpdateCountLimit = limit
+		return self.distanceUpdateCountLimit
 	elseif updateType == "dimension" then
-		return self.distanceUpdateCurDimCountLimit = limit
+		return self.distanceUpdateCurDimCountLimit
 	end
 
 	return false
@@ -163,10 +163,11 @@ end
 
 function IndicatorsManager:GetPositionUpdateCountLimit(updateType)
 	if updateType == "all" then
-		self.positionUpdateCountLimit = limit
+		return self.positionUpdateCountLimit
 	elseif updateType == "dimension" then
-		self.positionUpdateCurDimCountLimit = limit
+		return self.positionUpdateCurDimCountLimit
 	end
+
 	return false
 end
 
@@ -222,11 +223,11 @@ function IndicatorsManager:GetDefaultTextPlacement()
 	return self.defaultTextPlacement
 end
 
-function IndicatorsManager:GetDefaultTextAlignementX()
+function IndicatorsManager:GetDefaultTextAlignmentX()
 	return self.defaultTextAlignmentX
 end
 
-function IndicatorsManager:GetDefaultTextAlignementY()
+function IndicatorsManager:GetDefaultTextAlignmentY()
 	return self.defaultTextAlignmentY
 end
 

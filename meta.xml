@@ -19,5 +19,4 @@
 		<script src="classes/IndicatorGetters.lua" type="client" cache="false"/>
 
 		<!-- OTHER -->
-		<script src="random.lua" type="client" cache="false"/>
 </meta>

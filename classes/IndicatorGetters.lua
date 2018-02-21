@@ -61,11 +61,11 @@ function Indicator:GetTextPlacement()
 	return self.textPlacement
 end
 
-function Indicator:GetTextAlignementX()
+function Indicator:GetTextAlignmentX()
 	return self.textAlignmentX
 end
 
-function Indicator:GetTextAlignementY()
+function Indicator:GetTextAlignmentY()
 	return self.textAlignmentY
 end
 

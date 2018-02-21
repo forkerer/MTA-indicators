@@ -236,7 +236,7 @@ function IndicatorsManager:SetDefaultTextPlacement(placement)
 	return self
 end
 
-function IndicatorsManager:SetDefaultTextAlignementX(alignment)
+function IndicatorsManager:SetDefaultTextAlignmentX(alignment)
 	-- Check if alignment is allowed
 	if not AllowedAlignmentX[alignment] then
 		outputDebugString( "Tried to give indicator default text unknown alignmentX: "..tostring(alignment), 2 )
@@ -247,7 +247,7 @@ function IndicatorsManager:SetDefaultTextAlignementX(alignment)
 	return self
 end
 
-function IndicatorsManager:SetDefaultTextAlignementY(alignment)
+function IndicatorsManager:SetDefaultTextAlignmentY(alignment)
 	-- Check if alignment is allowed
 	if not AllowedAlignmentY[alignment] then
 		outputDebugString( "Tried to give indicator default text unknown alignmentY: "..tostring(alignment), 2 )
