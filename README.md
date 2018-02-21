@@ -219,17 +219,17 @@ Example code showing creation of indicator
 ```
 
 # Example gifs showing possible changes to indicators
->SetFont
 >![SetFont](https://media.giphy.com/media/5tw1iGOZltV0pLoiOv/giphy.gif)
+>SetFont
 
->SetImageScale
 >![SetImageScale](https://media.giphy.com/media/L14QoMejC3pcupUo8I/giphy.gif)
+>SetImageScale
 
->SetTextPlacement
 >![SetTextPlacement](https://media.giphy.com/media/1AHopOnKJ1Z7SsD2js/giphy.gif)
+>SetTextPlacement
 
->SetPosition
 >![SetPosition](https://media.giphy.com/media/2xPPo5ze9oJSOOthAh/giphy.gif)
+>SetPosition
 
 License
 ----
