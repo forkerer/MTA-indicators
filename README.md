@@ -9,7 +9,7 @@ This resource allows player to create custom indicators, both static positions a
 
 # File structure:
  - The resource is made of 2 classes:
-   - IndicatorsManager class, it's a singleton that's used to manage, update, create and deestroy indicators. It also contains default indicator settings, that are given to each new indicator.
+   - IndicatorsManager class, it's a singleton that's used to manage, update, create and destroy indicators. It also contains default indicator settings, that are given to each new indicator.
    - Indicator class, each instance of this class is new indicator, each indicator can have it's own settings/look independant of other indicators.
  - Both of those classes main definitions are written in their <classname>.lua file, both of those also have 2 other files containing setters and getters for their properties.
  - This resource doesn't export any functions because custom classes can't be exported properly along with their metatables easily.
@@ -129,6 +129,8 @@ Example code showing creation of indicator
 
 # All functions availible for IndicatorsManager:
 ```lua
+    IndicatorsManager:CreateIndicator(name, text, x, y, z, dimension) --Creates indicator with given id/name, displaying given text and x,y,z position in given dimension. The dimension can be either a number, or string "all"
+    IndicatorsManager:DestroyIndicatorByName(name) --Destroys indicator with given name/id
     IndicatorsManager:SetActive(state) --Disables/enables IndicatorsManager, while it's disabled all indicator related actions will not work, indicators won't be drawn or refreshed
     IndicatorsManager:SetDistanceUpdateCountLimit(updateType, limit) --Set's max number of indicators whose distance will be updated per frame, allowed types are "dimension" and "all"
     IndicatorsManager:SetPositionUpdateCountLimit(updateType, limit) --Set's max number of dynamic indicators whose position will be updated per frame, allowed types are "dimension" and "all"
